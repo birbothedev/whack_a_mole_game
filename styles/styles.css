@@ -1,0 +1,141 @@
+@font-face {
+    font-family: calSans;
+    src: url(CalSans-Regular.ttf);
+    font-weight: bold;
+}
+
+body {
+    background-color: #f7dc6f;
+    font-family: calSans;
+}
+
+#timer {
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    margin-bottom: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.gameWrapper {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    gap: 10%; 
+}
+
+.gameContainer {
+    width: fit-content;
+    height: auto;
+    margin: 0 auto;
+    margin-left: 0;
+    margin-right: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 64px);
+    grid-template-rows: repeat(3, 64px); 
+    column-gap: 5%;
+    row-gap: 5%;
+}
+
+.tiles {
+    position: relative;
+    border: 3px solid black;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 2%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+
+.tiles:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.tiles img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+.tiles.adjacent {
+    outline: 3px solid limegreen;
+    outline-offset: -3px;
+}
+
+.tiles.not-adjacent {
+    outline: 3px solid red;
+    outline-offset: -3px;
+}
+
+.playerInfoBox {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.infoGroup {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
+
+.item {
+    display: inline-block;
+    padding-left: 4%;
+}
+
+.buttons {
+    background-color: #FFFFFF;
+    border: 3px solid rgb(209,213,219);
+    border-radius: .5rem;
+    color: #111827;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    padding: .75rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.buttons:hover {
+    color:blueviolet;
+    border: 3px solid rgb(209,213,219);
+    border-radius: .5rem;
+    background-color: cadetblue;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* .inventoryGroup{
+    width: fit-content;
+    height: auto;
+    margin: 0 auto;
+    margin-left: 0;
+    margin-right: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 64px);
+    column-gap: 5%;
+}
+
+.inventoryItem {
+    position: relative;
+    border: 3px solid black;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 2%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+
+.inventoryItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+} */
