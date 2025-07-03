@@ -1,4 +1,4 @@
-import { spawnMole } from "./moleEvents.js";
+import { continuousSpawn, spawnMole } from "./moleEvents.js";
 import { startTimer } from "./util.js";
 
 const startButton = document.getElementById("startButton");
@@ -25,6 +25,6 @@ export function getKey(tile){
 
 function initialize(){
     initializeTileMap();
-    spawnMole();
+    continuousSpawn();
     startTimer();
 }

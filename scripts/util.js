@@ -65,3 +65,7 @@ export function startTimer() {
 function endGame(){
     console.log("Game Over!");
 }
+
+export function getRandomNumber(){
+    return Math.floor(Math.random() * 4);
+}

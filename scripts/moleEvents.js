@@ -1,4 +1,4 @@
-import { getAllTiles, shuffleTiles, createNewMoleImage, removeMoleImage } from "./util.js";
+import { getAllTiles, shuffleTiles, createNewMoleImage, removeMoleImage, getRandomNumber } from "./util.js";
 import { tileMap, getKey } from "./mainScript.js";
 
 
@@ -15,6 +15,15 @@ export function spawnMole(){
         removeMoleFromTile(tile);
     }, 1000); 
 }
+
+export function continuousSpawn(){
+    const interval = setInterval(spawnMole(), getRandomNumber());
+
+    setTimeout(() => {
+        clearInterval(interval);
+    }, 31);
+}
+
 
 function addMoleToNewTile(tile){
     const key = getKey(tile);
