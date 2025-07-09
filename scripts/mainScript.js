@@ -1,5 +1,6 @@
-import { continuousSpawn, spawnMole } from "./moleEvents.js";
-import { startTimer } from "./util.js";
+import { spawnMole } from "./moleEvents.js";
+import { listenForPlayerClicks } from "./playerEvents.js";
+import { startTimer, getRandomNumber } from "./util.js";
 
 const startButton = document.getElementById("startButton");
 startButton.addEventListener('click', function() {
@@ -25,6 +26,12 @@ export function getKey(tile){
 
 function initialize(){
     initializeTileMap();
-    continuousSpawn();
+    const intervalId = setInterval(() => {
+        spawnMole();
+    }, getRandomNumber());
+    setTimeout(() => {
+        clearInterval(intervalId);
+    }, 31000);
     startTimer();
+    listenForPlayerClicks();
 }

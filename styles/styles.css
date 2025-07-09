@@ -9,20 +9,29 @@ body {
     font-family: calSans;
 }
 
-#timer {
-    position: absolute;
-    left: 50%;
-    margin-right: -50%;
-    margin-bottom: 10%;
-    /* transform: translate(-50%, -50%); */
+.timerWrapper {
+    width: 100%;
+    text-align: center;
+    /* margin-bottom: 20px; */
 }
+
+
+#timer {
+    position: relative;
+    top: 20px; /* space from top of page */
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 
 .gameWrapper {
     margin-top: 5%;
     display: flex;
     justify-content: center; 
-    align-items: flex-start;
-    gap: 10%; 
+    flex-direction: column;
+    align-items: center;
+    gap: 50px; 
 }
 
 .gameContainer {
@@ -111,31 +120,3 @@ body {
     align-items: center;
     cursor: pointer;
 }
-
-/* .inventoryGroup{
-    width: fit-content;
-    height: auto;
-    margin: 0 auto;
-    margin-left: 0;
-    margin-right: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 64px);
-    column-gap: 5%;
-}
-
-.inventoryItem {
-    position: relative;
-    border: 3px solid black;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 2%;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 8px;
-}
-
-.inventoryItem:hover {
-    transform: translateY(-5px);
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-} */

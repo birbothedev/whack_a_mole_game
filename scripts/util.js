@@ -67,5 +67,5 @@ function endGame(){
 }
 
 export function getRandomNumber(){
-    return Math.floor(Math.random() * 4);
+    return Math.floor(Math.random() * 4000);
 }

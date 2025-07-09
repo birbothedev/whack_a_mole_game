@@ -13,15 +13,7 @@ export function spawnMole(){
 
     setTimeout(function() {
         removeMoleFromTile(tile);
-    }, 1000); 
-}
-
-export function continuousSpawn(){
-    const interval = setInterval(spawnMole(), getRandomNumber());
-
-    setTimeout(() => {
-        clearInterval(interval);
-    }, 31);
+    }, 2000); 
 }
 
 
@@ -31,7 +23,7 @@ function addMoleToNewTile(tile){
 
     if (tileData) {
         tileData.hasMole = true;
-        tileData.isEmpty = false;
+        tileData.empty = false;
     }
 
     createNewMoleImage(tile);
@@ -43,7 +35,7 @@ function removeMoleFromTile(tile){
 
     if (tileData) {
         tileData.hasMole = false;
-        tileData.isEmpty = true;
+        tileData.empty = true;
     }
 
     removeMoleImage(tile);
